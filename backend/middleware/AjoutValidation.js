@@ -1,4 +1,5 @@
 
+
 function AjoutValidation(req, res, next){
     const {nom, prenom, age, telephone, sexe} = req.body
     const errors = []
@@ -11,7 +12,8 @@ function AjoutValidation(req, res, next){
         errors.push('Entrez un prenom valide, 2 caractères minimum')
     }
 
-    if(!age || age <= 0  || age > 100 ){
+    const ageNum = Number(age)
+    if(!age || isNaN(ageNum) || ageNum <= 0 || ageNum > 100){
         errors.push('Entrez un age valide')
     }
 

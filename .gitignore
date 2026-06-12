@@ -3,6 +3,7 @@
 *.odt
 .env
 backend/node_modules/
+backend/uploads/
 *.rest
 
 
@@ -81,3 +82,8 @@ coverage/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+
+AGENTS.md
+AGENT.md
+UI_ScreenShot
